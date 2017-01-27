@@ -1,17 +1,13 @@
 ///////////////////////
 //Back-end
 ///////////////////////
-var toppings = [];
-var size;
-var delivery;
 
-function pizza(toppings, size, delivery) {
-  this.topping = [];
+function Pizza(size) {
   this.size = size;
-  this.delivered = delivery;
+  this.topping = [];
 }
 
-pizza.prototype.cost = function() {
+Pizza.prototype.cost = function() {
   var cost = 10;
 
   if (this.size === "SM") {
@@ -22,12 +18,15 @@ pizza.prototype.cost = function() {
     cost += 3;
   }
 
+  if (this.topping.length === 0) {
+    cost *= 1;
+  } else {
+    cost += this.topping.length;
+  }
+
   return cost;
 }
 
-function newPizza(toppings, size, delivery) {
-  var pizza = new pizza();
-}
 
 
 ///////////////////////
@@ -35,15 +34,15 @@ function newPizza(toppings, size, delivery) {
 ///////////////////////
 $(function() {
 
-  $("#pizzaToppings")
+  $("#submit").click(function(event) {
+    event.preventDefault();
 
-  $("#pizzaSubmit").submit(function() {
-    newPizza()
+    var pizzaSize = $("form#pizzaSize").val();
+    var newPizza = new Pizza(pizzaSize);
+    alert(newPizza);
+    $.each($("input[name = 'toppings']:checked"), function() {
+      newPizza.topping.push($(this).val());
+    });
+    return newPizza;
   });
-
-
-
-
-
-
 });

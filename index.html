@@ -11,34 +11,27 @@
   <body>
     <h1>Welcome to Rose City Pizza!</h1>
     <h4>Please choose your size</h4>
-    <div id="pizzaSelector">
-      <div class="radio">
-        <label><input id="pizzaSize" type="radio" name="optradio" value="SM">Small</label><br>
-        <label><input id="pizzaSize" type="radio" name="optradio" value="M">Medium</label><br>
-        <label><input id="pizzaSize" type="radio" name="optradio" value="LG">Large</label><br>
-      </div>
+    <form id="pizzaSelector">
+      <form id="pizzaSize">
+        <div class="radio">
+          <label><input type="radio" name="optradio" value="SM">Small</label><br>
+          <label><input type="radio" name="optradio" value="M">Medium</label><br>
+          <label><input type="radio" name="optradio" value="LG">Large</label><br>
+        </div>
+      </form>
       <h4>Please choose your toppings</h4>
       <div class="checkbox" id="pizzaToppings">
-        <label><input id="pizzaToppings" type="checkbox" value="pep">Pepironi</label><br>
-        <label><input id="pizzaToppings" type="checkbox" value="sausage">Sausage</label><br>
-        <label><input id="pizzaToppings" type="checkbox" value="onion">Onion</label><br>
-        <label><input id="pizzaToppings" type="checkbox" value="gpep">Green Peppers</label><br>
-        <label><input id="pizzaToppings" type="checkbox" value="chicken">Chicken</label><br>
-        <label><input id="pizzaToppings" type="checkbox" value="mush">Mushrooms</label><br>
-        <label><input id="pizzaToppings" type="checkbox" value="olive">Olives</label><br>
-        <label><input id="pizzaToppings" type="checkbox" value="pine">Pineapple</label><br>
-        <label><input id="pizzaToppings" type="checkbox" value="excheese">Extra Cheese</label><br>
+        <label><input name="toppings" type="checkbox" value="">Pepperoni</label><br>
+        <label><input name="toppings" type="checkbox" value="">Sausage</label><br>
+        <label><input name="toppings" type="checkbox" value="">Onion</label><br>
+        <label><input name="toppings" type="checkbox" value="">Green Peppers</label><br>
+        <label><input name="toppings" type="checkbox" value="">Chicken</label><br>
+        <label><input name="toppings" type="checkbox" value="">Mushrooms</label><br>
+        <label><input name="toppings" type="checkbox" value="">Olives</label><br>
+        <label><input name="toppings" type="checkbox" value="">Pineapple</label><br>
+        <label><input name="toppings" type="checkbox" value="">Extra Cheese</label><br>
       </div>
-      <h4>Will this be devivery or pickup?</h4>
-      <div class="radio">
-        <label><input id="delivery" type="radio" name="optradio" value="deliv">Delivery</label><br>
-        <label><input id="delivery" type="radio" name="optradio" value="pickup">Pickup</label><br>
-      </div>
-    </div>
-    <h3>Add another pizza to order?</h3>
-    <div id="submit">
-      <button type="submit" id="anotherPizza" class="btn btn-primary">Add another</button>
-      <button type="submit" id="pizzaSubmit" class="btn btn-danger">No, submit</button>
-    </div>
+      <button id="submit" type="submit" class="btn btn-danger">Place Order</button>
+    </form>
   </body>
 </html>
