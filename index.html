@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Rose City Pizza</title>
+  </head>
+  <body>
+    <h1>Welcome to Rose City Pizza!</h1>
+    <h4>Please choose your size</h4>
+    <div id="pizzaSelector">
+      <div class="radio">
+        <label><input id="pizzaSize" type="radio" name="optradio" value="SM">Small</label><br>
+        <label><input id="pizzaSize" type="radio" name="optradio" value="M">Medium</label><br>
+        <label><input id="pizzaSize" type="radio" name="optradio" value="LG">Large</label><br>
+      </div>
+      <h4>Please choose your toppings</h4>
+      <div class="checkbox" id="pizzaToppings">
+        <label><input id="pizzaToppings" type="checkbox" value="pep">Pepironi</label><br>
+        <label><input id="pizzaToppings" type="checkbox" value="sausage">Sausage</label><br>
+        <label><input id="pizzaToppings" type="checkbox" value="onion">Onion</label><br>
+        <label><input id="pizzaToppings" type="checkbox" value="gpep">Green Peppers</label><br>
+        <label><input id="pizzaToppings" type="checkbox" value="chicken">Chicken</label><br>
+        <label><input id="pizzaToppings" type="checkbox" value="mush">Mushrooms</label><br>
+        <label><input id="pizzaToppings" type="checkbox" value="olive">Olives</label><br>
+        <label><input id="pizzaToppings" type="checkbox" value="pine">Pineapple</label><br>
+        <label><input id="pizzaToppings" type="checkbox" value="excheese">Extra Cheese</label><br>
+      </div>
+      <h4>Will this be devivery or pickup?</h4>
+      <div class="radio">
+        <label><input id="delivery" type="radio" name="optradio" value="deliv">Delivery</label><br>
+        <label><input id="delivery" type="radio" name="optradio" value="pickup">Pickup</label><br>
+      </div>
+    </div>
+    <h3>Add another pizza to order?</h3>
+    <div id="submit">
+      <button type="submit" id="anotherPizza" class="btn btn-primary">Add another</button>
+      <button type="submit" id="pizzaSubmit" class="btn btn-danger">No, submit</button>
+    </div>
+  </body>
+</html>
