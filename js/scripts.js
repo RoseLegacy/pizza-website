@@ -3,16 +3,16 @@
 ///////////////////////
 
 function Pizza(size) {
-  this.size = size;
+  this.pizzasize = size;
   this.topping = [];
 }
 
 Pizza.prototype.cost = function() {
   var cost = 10;
 
-  if (this.size === "SM") {
+  if (this.pizzasize === "SM") {
     cost += 1;
-  } else if (this.size === "M") {
+  } else if (this.pizzasize === "M") {
     cost += 2;
   } else {
     cost += 3;
@@ -39,10 +39,10 @@ $(function() {
 
     var pizzaSize = $("form#pizzaSize").val();
     var newPizza = new Pizza(pizzaSize);
-    alert(newPizza);
-    $.each($("input[name = 'toppings']:checked"), function() {
+
+    $.each($("input[name='toppings']:checked"), function() {
       newPizza.topping.push($(this).val());
     });
-    return newPizza;
+    $("#output").append("<p>output " + newPizza + this.topping + pizzaSize + "</p>")
   });
 });
